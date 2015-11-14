@@ -1,0 +1,4 @@
+{
+  "standaloneName": "<%- camelCaseName %>",
+  "bundleName": "<%- paramCaseName %>"
+}
