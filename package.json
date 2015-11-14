@@ -1,6 +1,6 @@
 {
   "name": "generator-gulp-browserify",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -17,7 +17,9 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator", "gulp", "browserify"
+    "yeoman-generator",
+    "gulp",
+    "browserify"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
