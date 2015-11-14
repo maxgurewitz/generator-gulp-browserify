@@ -12,6 +12,7 @@
   "devDependencies": {
     "browserify": "*",
     "chai": "*",
+    "eslint": "*",
     "eslint-plugin-mocha": "*",
     "gulp": "*",
     "gulp-eslint": "*",

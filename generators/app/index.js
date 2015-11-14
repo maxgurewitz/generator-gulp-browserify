@@ -3,11 +3,11 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var changeCase = require('change-case');
-
-var DEFAULT_PROJECT_NAME = 'generated-project';
+var path = require('path');
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
+    var self = this;
     var done = this.async();
 
     this.log(yosay(
@@ -18,16 +18,16 @@ module.exports = yeoman.generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Your project name',
-      default : DEFAULT_PROJECT_NAME
+      default : path.parse(self.destinationRoot()).base
     }];
 
     this.prompt(prompts, function (props) {
-      this.props = props;
-      this.paramCaseName = changeCase.paramCase(props.name);
-      this.camelCaseName = changeCase.camelCase(props.name);
+      self.props = props;
+      self.paramCaseName = changeCase.paramCase(props.name);
+      self.camelCaseName = changeCase.camelCase(props.name);
 
       done();
-    }.bind(this));
+    });
   },
 
   writing: {
