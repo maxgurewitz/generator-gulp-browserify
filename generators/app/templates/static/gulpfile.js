@@ -8,12 +8,17 @@ Object.keys(taskFiles).forEach(function(taskFileName) {
 
   Object.keys(taskFile).forEach(function(taskKey) {
     var taskValues = taskFile[taskKey];
-    var taskName = taskFileName + ':' + taskKey;
-    var dependencies = taskValues.dependencies || [];
+    var taskName = taskKey === 'default' ?
+      taskFileName :
+      taskFileName + ':' + taskKey;
 
-    gulp.task(taskName, dependencies, function(cb) {
-      return taskValues.task(cb, gulp);
-    });
+    var dependencies = taskValues.dependencies || [];
+    var task = taskValues.task ?
+      function(cb) { return taskValues.task(cb, gulp); } :
+      function(cb) { cb(); };
+
+
+    gulp.task(taskName, dependencies, task);
   });
 });
 
