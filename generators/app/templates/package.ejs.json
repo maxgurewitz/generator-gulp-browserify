@@ -1,11 +1,11 @@
 {
   "name": "<%- paramCaseName %>",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "start": "gulp",
-    "test": "gulp test:unit",
+    "test": "gulp test",
     "lint": "gulp lint:js"
   },
   "dependencies": {},
