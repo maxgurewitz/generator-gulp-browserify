@@ -1,3 +1,9 @@
+# generator-gulp-browserify
+
+A yeoman generator for initializing front end projects with gulp and browserify.
+
+Includes browserify bundle, lint, and test gulp tasks.
+
 ## Getting Started
 
 ```bash
