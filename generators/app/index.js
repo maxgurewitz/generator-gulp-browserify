@@ -18,7 +18,7 @@ module.exports = yeoman.generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Your project name',
-      default : path.parse(self.destinationRoot()).base
+      default : path.basename(self.destinationRoot())
     }];
 
     this.prompt(prompts, function (props) {
