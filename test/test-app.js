@@ -15,6 +15,8 @@ describe('gulp-browserify:app', function () {
   it('renders and creates template files', function () {
     assert.file([
       'gulp/config.json',
+      '.gitignore',
+      '.eslintrc',
       'package.json'
     ]);
   });

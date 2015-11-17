@@ -33,11 +33,13 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     static: function () {
       this.fs.copy(this.templatePath('static'), this.destinationPath());
+      this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'), this);
+      this.fs.copy(this.templatePath('_eslintrc'), this.destinationPath('.eslintrc'), this);
     },
 
     templates: function () {
-      this.fs.copyTpl(this.templatePath('package.ejs.json'), this.destinationPath('package.json'), this);
-      this.fs.copyTpl(this.templatePath('gulp-config.ejs.json'), this.destinationPath('gulp/config.json'), this);
+      this.fs.copyTpl(this.templatePath('_package.ejs.json'), this.destinationPath('package.json'), this);
+      this.fs.copyTpl(this.templatePath('_gulp-config.ejs.json'), this.destinationPath('gulp/config.json'), this);
     }
   },
 
