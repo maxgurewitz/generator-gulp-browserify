@@ -16,6 +16,7 @@
     "eslint-plugin-mocha": "*",
     "gulp": "*",
     "gulp-eslint": "*",
+    "gulp-istanbul": "*",
     "gulp-mocha": "*",
     "gulp-rename": "*",
     "gulp-util": "*",
