@@ -8,7 +8,8 @@
     "test": "gulp test",
     "lint": "gulp lint:js"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "browserify": "*",
     "chai": "*",
